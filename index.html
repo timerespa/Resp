@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czas respu metinów</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">DZ</div>
+        <h1>Kiedy spadną metiny</h1>
+
+        <!-- <p class="warning">Trwa przerwa techniczna.</p> -->
+
+        <p>
+        <h2>Najbliższy resp: <strong><span id="next-date">Ładowanie...</span></strong></h2>
+        </p>
+        <p class="timer">Pozostało: <span id="timer">Ładowanie...</span></p>
+        <p class="timer">Ostatni resp: <span id="last-timer">Ładowanie...</span></p>
+        <button id="toggle-button" class="toggle-button">Kolejne 12 respów</button>
+        <div id="next-dates-list" class="hidden"></div>
+        <div>
+            <h2>
+                <img src="img/Metin1.png" class="header-image">
+                Mapy metinów
+                <img src="img/Metin2.png" class="header-image">
+            </h2>
+            <div class="radio-buttons">
+                <input type="radio" id="option1" name="image-options" data-image="img/m1_chunjo.jpg">
+                <label for="option1">Chunjo M1</label>
+                <input type="radio" id="option2" name="image-options" data-image="img/m1_jino.jpg">
+                <label for="option2">Jino M1</label>
+                <input type="radio" id="option3" name="image-options" data-image="img/m1_shinsoo.jpg">
+                <label for="option3">Shinsoo M1</label>
+                <input type="radio" id="option4" name="image-options" data-image="img/m2_chunjo.jpg">
+                <label for="option4">Chunjo M2</label>
+                <input type="radio" id="option5" name="image-options" data-image="img/m2_jino.jpg">
+                <label for="option5">Jino M2</label>
+                <input type="radio" id="option6" name="image-options" data-image="img/m2_shinsoo.jpg">
+                <label for="option6">Shinsoo M2</label>
+                <input type="radio" id="option7" name="image-options" data-image="img/desert.jpg">
+                <label for="option7">Pustynia</label>
+                <input type="radio" id="option8" name="image-options" data-image="img/fireland.jpg">
+                <label for="option8">Ognista Ziemia</label>
+                <input type="radio" id="option9" name="image-options" data-image="img/green_forest.jpg">
+                <label for="option9">Zielony Las</label>
+                <input type="radio" id="option10" name="image-options" data-image="img/red_forest.jpg">
+                <label for="option10">Czerw. Las</label>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <h2>
+                <img src="img/Alchemik.png" class="header-image">
+                Alchemicy
+                <img src="img/AlchemikRev.png" class="header-image">
+            </h2>
+                <div class="radio-buttons" style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+                    <input type="radio" id="option11" name="image-options" data-image="img/m1_chunjo_alhemicy.jpg">
+                    <label for="option11">Chunjo M1</label>
+                </div>
+        </div>
+
+        <div id="image-frame" class="image-frame">
+            <p>Wybierz opcję, aby zobaczyć obraz.</p>
+        </div>
+
+        <footer>Autor: <strong>Mniami</strong>
+            <h5>Wersja 3.0</h5>
+        </footer>
+    </div>
+</body>
+
+</html>
