@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiedy Spadną Metiny?</title>
+    <title>Respawn Timer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('nowe_tlo.jpg'); /* Zmień na własne tło */
+            background-image: url('tlo.jpg'); /* Zmień na własne tło */
             background-size: cover;
             background-position: center;
             color: white;
@@ -53,7 +53,7 @@
 </head>
 <body>
 
-    <h1>Kiedy Spadną Metiny?</h1>
+    <h1>Respawn Timer</h1>
 
     <div class="clock-container">
         <div class="clock-box">
@@ -92,4 +92,5 @@
 
 </body>
 </html>
+
 
