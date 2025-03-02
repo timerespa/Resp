@@ -1,158 +1,104 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Czas respu metinów</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <title>Kiedy Spadną Metiny</title>
+    <style>
+        /* Podstawowy styl strony */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            background-image: url('your-metina-image.jpg'); /* Tło z grafiką Metina */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #FFD700;
+        }
+        .countdown {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #FFD700;
+        }
+        .map-container {
+            margin-top: 30px;
+        }
+        .map img {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px;
+            border: 5px solid #FFD700;
+        }
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="logo">DZ</div>
-        <h1>Kiedy spadną metiny</h1>
 
-        <!-- <p class="warning">Trwa przerwa techniczna.</p> -->
+<header>
+    <h1>Kiedy Spadną Metiny</h1>
+    <div class="countdown" id="countdown"></div>
+</header>
 
-        <p>
-        <h2>Najbliższy resp: <strong><span id="next-date">Ładowanie...</span></strong></h2>
-        </p>
-        <p class="timer">Pozostało: <span id="timer">Ładowanie...</span></p>
-        <p class="timer">Ostatni resp: <span id="last-timer">Ładowanie...</span></p>
-        <button id="toggle-button" class="toggle-button">Kolejne 12 respów</button>
-        <div id="next-dates-list" class="hidden"></div>
-        <div>
-            <h2>
-                <img src="img/Metin1.png" class="header-image">
-                Mapy metinów
-                <img src="img/Metin2.png" class="header-image">
-            </h2>
-            <div class="radio-buttons">
-                <input type="radio" id="option1" name="image-options" data-image="img/m1_chunjo.jpg">
-                <label for="option1">Chunjo M1</label>
-                <input type="radio" id="option2" name="image-options" data-image="img/m1_jino.jpg">
-                <label for="option2">Jino M1</label>
-                <input type="radio" id="option3" name="image-options" data-image="img/m1_shinsoo.jpg">
-                <label for="option3">Shinsoo M1</label>
-                <input type="radio" id="option4" name="image-options" data-image="img/m2_chunjo.jpg">
-                <label for="option4">Chunjo M2</label>
-                <input type="radio" id="option5" name="image-options" data-image="img/m2_jino.jpg">
-                <label for="option5">Jino M2</label>
-                <input type="radio" id="option6" name="image-options" data-image="img/m2_shinsoo.jpg">
-                <label for="option6">Shinsoo M2</label>
-                <input type="radio" id="option7" name="image-options" data-image="img/desert.jpg">
-                <label for="option7">Pustynia</label>
-                <input type="radio" id="option8" name="image-options" data-image="img/fireland.jpg">
-                <label for="option8">Ognista Ziemia</label>
-                <input type="radio" id="option9" name="image-options" data-image="img/green_forest.jpg">
-                <label for="option9">Zielony Las</label>
-                <input type="radio" id="option10" name="image-options" data-image="img/red_forest.jpg">
-                <label for="option10">Czerw. Las</label>
-            </div>
+<main>
+    <h2>Mapa 1 - Lokacja Metinów</h2>
+    <div class="map-container">
+        <div class="map">
+            <img src="mapka1.jpg" alt="Mapa 1">
         </div>
-        <div style="text-align: center;">
-            <h2>
-                <img src="img/Alchemik.png" class="header-image">
-                Alchemicy
-                <img src="img/AlchemikRev.png" class="header-image">
-            </h2>
-                <div class="radio-buttons" style="display: flex; justify-content: center; align-items: center; gap: 8px;">
-                    <input type="radio" id="option11" name="image-options" data-image="img/m1_chunjo_alhemicy.jpg">
-                    <label for="option11">Chunjo M1</label>
-                </div>
-        </div>
-
-        <div id="image-frame" class="image-frame">
-            <p>Wybierz opcję, aby zobaczyć obraz.</p>
-        </div>
-
-        <footer>Autor: <strong>Mniami</strong>
-            <h5>Wersja 3.0</h5>
-        </footer>
     </div>
-</body>
 
-</html>
-<!DOCTYPE html>
-<html lang="pl">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Kiedy spadn? metiny</title>
- <meta name="author" content="LuxuryPL">
- <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
- <style>
- body {
- font-family: Arial, sans-serif;
- text-align: center;
- background: url('https://source.unsplash.com/1600x900/?tango,dance') no-repeat center center fixed;
- background-size: cover;
- color: white;
- padding: 50px;
- }
- h1 {
- font-size: 36px;
- background-color: rgba(0, 0, 0, 0.6);
- display: inline-block;
- padding: 10px 20px;
- border-radius: 10px;
- }
- #countdown, #lastResp, #nextResps {
- font-family: 'Orbitron', sans-serif;
- font-size: 28px;
- font-weight: bold;
- margin-top: 10px;
- background-color: rgba(0, 0, 0, 0.6);
- display: inline-block;
- padding: 10px;
- border-radius: 10px;
- }
- #countdown {
- color: #ffcc00;
- }
- #lastResp {
- color: #ff4444;
- }
- .resp-list {
- margin-top: 20px;
- }
- .maps {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- gap: 10px;
- margin-top: 20px;
- }
- .map-button {
- background-color: #6b2f2f;
- color: white;
- padding: 10px 20px;
- border: none;
- border-radius: 5px;
- cursor: pointer;
- font-size: 18px;
- }
- .map-button:hover {
- background-color: #8c3b3b;
- }
- </style>
-</head>
-<body>
- <h1>Kiedy spadn? metiny?</h1>
- <p>Najbli?szy resp: <span id="countdown"></span></p>
- <p>Ostatni resp: <span id="lastResp"></span></p>
- <button onclick="showNextResps()">Kolejne 12 respów</button>
- <div id="nextResps" class="resp-list"></div>
- <h2>?? Mapy Shinsoo ??</h2>
- <div class="maps">
- <button class="map-button">Shinsoo M1</button>
- <button class="map-button">Shinsoo M2</button>
- <button class="map-button">Pustynia Yongbi</button>
- <button class="map-button">Ognista Ziemia</button>
- <button class="map-button">Zielony Las</button>
- <button class="map-button">Czerwony Las</button>
- </div>
+    <h2>Mapa 2 - Lokacja Metinów</h2>
+    <div class="map-container">
+        <div class="map">
+            <img src="mapka2.jpg" alt="Mapa 2">
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Kiedy Spadną Metiny | Wszystkie prawa zastrzeżone</p>
+</footer>
+
+<script>
+// Ustawienie daty, do której będzie odliczanie (np. 3 minuty od teraz)
+var respDate = new Date(new Date().getTime() + 3 * 60 * 1000); 
+
+function updateCountdown() {
+    var now = new Date().getTime();
+    var distance = respDate - now;
+
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = minutes + "m " + seconds + "s ";
+
+    // Jeśli czas się skończy, pokaż wiadomość
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Metiny już spadły!";
+    }
+}
+
+// Odświeżanie zegara co 1 sekundę
+var x = setInterval(updateCountdown, 1000);
+</script>
+
 </body>
 </html>
